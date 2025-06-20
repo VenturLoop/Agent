@@ -11,7 +11,9 @@ app.use(morgan('dev'));
 
 // AI Routes
 const aiRoutes = require('./routes/aiRoutes');
+const marketResearchRoutes = require('./routes/marketResearchRoutes'); // Added this line
 app.use('/api/ai', aiRoutes);
+app.use('/api/ai/market-research', marketResearchRoutes); // Added this line
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
